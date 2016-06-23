@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <head>
+<title>Welcome!</title>
 <style>
 
+
+
 .background{
-width:60%;
+background-color:#eeeeee;
+width:95%;
 margin: 0px auto;
-padding-top:5px
+padding-top:5px;
+border:2px solid black;
+border-radius:2%;
 }
 
 .menubar{
-background-color:blue;
-width:95%;
+float:right;
+width:58%;
 overflow:hidden;
 margin: 0px auto;
 padding:2px 5px 5px 2px;
+background-color:#eeffff;
+border-top:2px solid #eeffff;
+border-bottom:2px solid #eeffff;
 }
 
 ul{
@@ -29,56 +38,59 @@ float:top;
 
 li a{
 text-decoration:none;
-color:black;
+color:green;
 font-size:20px;
 padding:2px 10px 10px 2px;
 text-align:center;
 }
 
 li a:hover{
-background-color:grey;
+color:red;
 }
 
 li.more{display:inline-block;}
 
-.moredropdown-content{
+.menu-content{
 display:none;
 position:absolute;
-background-color:violet;
 width:100px;
+background-color:#eeffff;
+border:2px solid #eeeeff;
+padding: 2px 10px 10px 2px;
 }
 
-.moredropdown-content a{
-display:block;
-}
+
 
 .show{display:block;}
 
 .copyright{
-padding-top:50px;
-color:grey;
+padding-top:150px;
+color:black;
 text-align:center;
 }
 </style>
 </head>
 <html>
-	<body>
+	<body >
 	
 	<div class="background">
 		<div class="menubar">
 		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="coming.html">News</a></li>
-			<li><a href="javascript:void(0)" onclick="moredropdown()" class="more">More</a>
-				<div class="moredropdown-content" id="moredropdown">
-					<a href="contact.html">Contact</a>
-					<a href="coming.html">Others</a>
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="coming.html">ABOUT</a></li>
+			<li><a href="coming.html">SERVICES</a></li>
+			<li><a href="coming.html">PROJECT</a></li>
+			<li><a href="coming.html">BLOG</a></li>
+			<li><a href="javascript:void(0)" onclick="moredropdown()" class="more">MORE</a>
+				<div class="menu-content" id="menu">
+					<a href="contact.html">CONTACT</a>
+					<a href="coming.html">OTHERS</a>
 				</div>
 			</li>
 		</ul>
 		</div>
 		<div >
-			<h1 style="color:black;text-align:center;font-family:verdana">Hang King Ling</h1>
+			<h1 style="color:black;text-align:center;font-family:verdana">Welcome!</h1>
 			<div style="text-align: center;">
 				<img src="casualphoto.jpg" alt="Coming Soon" style="border:5px outset yellowgreen;border-radius:5px;">
 			</div>
@@ -87,7 +99,7 @@ text-align:center;
 				</a>
 			</div>
 		</div>
-		<footer class="copyright">&copy; 2016 Hang King Ling</footer>
+		<footer class="copyright">&copy; 2016 Hang King Ling. All Rights Reserved | Powered by HTML</footer>
 	</div>
 	</body>
 </html>
@@ -95,7 +107,7 @@ text-align:center;
 <script>
 
 function moredropdown(){
-document.getElementById("moredropdown").classList.toggle("show");
+document.getElementById("menu").classList.toggle("show");
 }
 
 </script>
